@@ -1,0 +1,126 @@
+:root {
+    --bg-color-light: #f0f4f8;
+    --text-color-light: #333;
+    --ai-message-bg-light: #ffffff;
+    --header-bg-light: #ffffff;
+    --border-color-light: #e2e8f0;
+    --user-bubble-color-default: #6366f1;
+    --card-bg-light: #ffffff;
+    --input-bg-light: #f1f5f9;
+}
+
+[data-theme="dark"] {
+    --bg-color-dark: #121212;
+    --text-color-dark: #e0e0e0;
+    --ai-message-bg-dark: #1f1f1f;
+    --header-bg-dark: #1e1e1e;
+    --border-color-dark: #2c2c2c;
+    --card-bg-dark: #1f1f1f;
+    --input-bg-dark: #2c2c2c;
+}
+
+body {
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+}
+
+[data-theme="dark"] body {
+    background-color: var(--bg-color-dark);
+    color: var(--text-color-dark);
+}
+
+.ai-message {
+    background-color: var(--ai-message-bg-light);
+    color: var(--text-color-light);
+}
+
+[data-theme="dark"] .ai-message {
+    background-color: var(--ai-message-bg-dark);
+    color: var(--text-color-dark);
+}
+
+.input-container {
+    border-top: 1px solid var(--border-color-light);
+    background-color: var(--header-bg-light);
+}
+
+[data-theme="dark"] .input-container {
+    border-top-color: var(--border-color-dark);
+    background-color: var(--header-bg-dark);
+}
+
+.input-field {
+    background-color: var(--input-bg-light);
+    color: var(--text-color-light);
+}
+
+[data-theme="dark"] .input-field {
+    background-color: var(--input-bg-dark);
+    color: var(--text-color-dark);
+}
+
+.modal-content {
+    background-color: var(--header-bg-light);
+    color: var(--text-color-light);
+}
+
+[data-theme="dark"] .modal-content {
+    background-color: var(--header-bg-dark);
+    color: var(--text-color-dark);
+}
+
+.magic-button {
+    background-color: var(--header-bg-light);
+    color: var(--text-color-light);
+    border: 1px solid var(--border-color-light);
+}
+
+[data-theme="dark"] .magic-button {
+    background-color: var(--ai-message-bg-dark);
+    color: var(--text-color-dark);
+    border-color: var(--border-color-dark);
+}
+
+.magic-button:hover {
+    background-color: #f7fafc;
+}
+
+[data-theme="dark"] .magic-button:hover {
+    background-color: #2c2c2c;
+}
+
+.room-list-container {
+    background-color: var(--bg-color-light);
+}
+
+[data-theme="dark"] .room-list-container {
+    background-color: var(--bg-color-dark);
+}
+
+.room-item {
+    background-color: var(--ai-message-bg-light);
+}
+
+[data-theme="dark"] .room-item {
+    background-color: var(--ai-message-bg-dark);
+}
+
+.auth-container {
+    background-color: var(--card-bg-light);
+    color: var(--text-color-light);
+}
+
+[data-theme="dark"] .auth-container {
+    background-color: var(--card-bg-dark);
+    color: var(--text-color-dark);
+}
+
+.auth-input {
+    background-color: var(--input-bg-light);
+    color: var(--text-color-light);
+}
+
+[data-theme="dark"] .auth-input {
+    background-color: var(--input-bg-dark);
+    color: var(--text-color-dark);
+}
