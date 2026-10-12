@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Best Friend AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/themes.css">
+</head>
+<body class="bg-gray-100 flex flex-col h-screen">
+
+    <!-- Authentication View -->
+    <div id="auth-page" class="flex flex-col items-center justify-center p-8 h-full bg-gradient-to-br from-indigo-500 to-purple-600 transition-all duration-500">
+        <div class="auth-container rounded-xl shadow-lg p-8 w-full max-w-sm text-center transform transition-transform duration-500 ease-in-out scale-100 opacity-100">
+            <h2 id="auth-title" class="text-3xl font-bold mb-6">Sign In</h2>
+            <p id="auth-error" class="text-red-500 mb-4 hidden"></p>
+            <p id="verification-message" class="text-green-500 mb-4 hidden"></p>
+            <form id="auth-form" class="space-y-4">
+                <input type="email" id="email-input" placeholder="Email" class="auth-input w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <input type="password" id="password-input" placeholder="Password" class="auth-input w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                <button type="submit" id="auth-submit-button" class="w-full px-4 py-3 rounded-lg bg-indigo-500 text-white font-semibold shadow-lg hover:bg-indigo-600 transition-colors">Sign In</button>
+            </form>
+            <div class="mt-4 text-sm">
+                <p id="auth-toggle-text">Don't have an account? <a href="#" id="auth-toggle-link" class="text-indigo-500 hover:underline">Sign Up</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Chat Workspace -->
+    <div id="main-app" class="flex flex-col h-full hidden">
+        <header class="bg-white shadow-sm p-4 sticky top-0 z-10 flex justify-between items-center transition-colors">
+            <div class="flex items-center space-x-2">
+                <h1 id="header-title" class="text-xl font-bold">My Best Friend AI</h1>
+            </div>
+            <div class="flex items-center space-x-2">
+                <button id="mode-toggle" class="magic-button text-sm">Switch to Chat Rooms</button>
+            </div>
+        </header>
+
+        <div id="ai-chat-page" class="flex flex-col h-full">
+            <main id="ai-chat-messages" class="chat-messages"></main>
+            <div class="input-container flex flex-col space-y-4">
+                <div class="flex items-end space-x-2">
+                    <textarea id="ai-user-input" class="input-field flex-grow px-4 py-3 rounded-2xl border border-gray-300" rows="1" placeholder="Share your concerns..."></textarea>
+                    <button id="ai-send-button" class="px-4 py-3 rounded-full bg-indigo-500 text-white font-semibold shadow-lg">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/firebase-config.js"></script>
+    <script type="module" src="js/gemini-api.js"></script>
+</body>
+</html>
