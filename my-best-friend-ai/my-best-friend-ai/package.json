@@ -1,0 +1,12 @@
+{
+  "name": "my-best-friend-ai",
+  "version": "1.0.0",
+  "description": "AI Companion & Collaborative Chat Application",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "npx serve src"
+  },
+  "keywords": ["ai", "gemini", "firebase", "chat"],
+  "author": "Academic Team",
+  "license": "MIT"
+}
